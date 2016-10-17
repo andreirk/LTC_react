@@ -1,0 +1,25 @@
+ {
+ "rules": {
+    "func-names": 0,
+    "no-unused-expressions": 0,
+    "id-length": 0,
+    "no-multi-spaces": 0,
+    "no-mixed-spaces-and-tabs": 2,
+
+    "no-unused-vars": [1, {"vars": "all", "args": "none"}],
+    "react/jsx-uses-react": 1,
+    "react/prop-types": 0,
+    "no-console": 0
+  },
+  "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+  "parser": "babel-eslint", 
+  "plugins": [
+    "react"
+  ]
+ }
