@@ -1,6 +1,9 @@
 import React, {Component, PropTypes} from 'react'
 import { Link } from "react-router"
  
+import Footer from "../components/layout/Footer"
+import Nav from "../components/layout/Nav"
+
 export default class Layout extends Component { 
 
     constructor() {
@@ -12,13 +15,27 @@ export default class Layout extends Component {
 
     render() {
 
+        const { location } = this.props;
+        const containerStyle = {
+            marginTop: '60px'
+        }
+
         return (
             <div>
-                <h1>KillerNews.net</h1>
-                {this.props.children}
-                <Link to='archives'>archives</Link>
-                <Link to='settings'><button className='btn btn-primary' >settings</button></Link>
-                <button onClick={this.navigate} >GO HOME </button>
+
+                <Nav location={location} />
+                <div className="container" style={containerStyle} >
+                    <div className="row" >
+                        <div className='col-lg-12' >
+                            <h1>KillerNews.net</h1>
+
+                            {this.props.children}
+
+                        </div>
+                    </div>
+                 <Footer></Footer>   
+                </div>
+                            
             </div>
         )
     }
